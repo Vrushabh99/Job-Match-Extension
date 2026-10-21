@@ -1,4 +1,4 @@
-# Posting vs resume (React + TypeScript)
+# JD vs Resume (React + TypeScript)
 
 Chrome extension (Manifest V3) built with Vite, React 18 and TypeScript.
 Compares the job posting in your active tab with your resume and lists
