@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-paper text-ink text-sm leading-relaxed font-sans;
+  }
+
+  h1 {
+    @apply m-0 text-base font-bold;
+  }
+
+  h2 {
+    @apply mt-4 mb-2 text-xs font-bold;
+  }
+
+  p {
+    @apply m-0;
+  }
+
+  details {
+    @apply mb-3 border border-line rounded-lg bg-white;
+  }
+
+  summary {
+    @apply my-2 cursor-pointer font-semibold;
+  }
+
+  details[open] summary {
+    @apply border-b border-line;
+  }
+
+  textarea {
+    @apply w-full px-2 py-2 border border-line rounded text-xs;
+    resize: vertical;
+  }
+
+  button {
+    @apply font-semibold rounded cursor-pointer;
+  }
+}
+
+@layer components {
+  .muted {
+    @apply text-muted text-xs;
+  }
+
+  .title {
+    @apply mt-0.5 truncate;
+  }
+
+  .primary {
+    @apply w-full px-2.5 py-2.5 border-0 bg-accent text-white;
+  }
+
+  .primary:hover:not(:disabled) {
+    @apply bg-[#0c635c];
+  }
+
+  .primary:disabled {
+    @apply opacity-70 cursor-wait;
+  }
+
+  .secondary {
+    @apply px-3 py-1.5 border border-line bg-white text-ink;
+  }
+
+  button:focus-visible,
+  summary:focus-visible,
+  textarea:focus-visible {
+    @apply outline-2 outline-accent outline-offset-2;
+  }
+
+  .message {
+    @apply mt-2.5 text-miss-ink;
+  }
+
+  .score {
+    @apply flex items-baseline gap-2.5 mt-4;
+  }
+
+  .pct {
+    @apply text-5xl font-bold leading-none -tracking-[0.02em];
+  }
+
+  .caption {
+    @apply text-muted text-xs;
+  }
+
+  .bar {
+    @apply h-1.5 mt-2.5 rounded-sm bg-miss-line overflow-hidden;
+  }
+
+  .bar span {
+    @apply block h-full bg-accent;
+  }
+
+  .chips {
+    @apply flex flex-wrap gap-1.5 m-0 p-0 list-none;
+  }
+
+  .chips li {
+    @apply px-2 py-1 border rounded-full text-xs font-semibold;
+  }
+
+  .chips li small {
+    @apply ml-1 font-medium opacity-70;
+  }
+
+  .chips.matched li {
+    @apply bg-match-bg border-match-line text-match-ink;
+  }
+
+  .chips.missing li {
+    @apply bg-miss-bg border-miss-line text-miss-ink;
+  }
+
+  .chips .empty {
+    @apply border-0 bg-none p-0 text-muted font-normal;
+  }
+
+  details {
+    @apply px-3 py-2.5;
+  }
+  /* details > textarea,
+  details > .row {
+    @apply mx-3 my-2.5;
+  } */
+
+  .row {
+    @apply flex items-center gap-2.5;
+  }
+}

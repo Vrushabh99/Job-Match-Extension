@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Job Matcher",
+  "version": "0.1.0",
+  "minimum_chrome_version": "114",
+  "description": "Compare the job posting you have open with your resume and see which keywords match and which are missing.",
+  "action": {
+    "default_title": "Open the resume checker"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting", "storage", "sidePanel"],
+  "host_permissions": [
+    "https://*.linkedin.com/*",
+    "https://*.naukri.com/*",
+    "https://*.indeed.com/*",
+    "https://*.greenhouse.io/*",
+    "https://*.lever.co/*",
+    "https://*.ashbyhq.com/*",
+    "https://*.myworkdayjobs.com/*",
+    "https://*.mail.google.com/*"
+  ]
+}
